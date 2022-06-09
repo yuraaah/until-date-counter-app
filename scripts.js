@@ -7,15 +7,28 @@ const defaultDate = "1 Jan 2023";
 
 // -----------------
 document.getElementById('onClickDate').onclick = function dateInput() {
-    var customDate = document.getElementById("dateInputFrm").value;
-    countdown(customDate)
-}     
+    var customDateMl = document.getElementById("dateInputFrm").value;
+    var customDate = new Date(customDateMl).toDateString();
+    
+    const year = customDate.substring(11,17);
+    const day = customDate.substring(8,10).replaceAll('0', '');
+    const month = customDate.substring(4,7);
+
+    // const customDatePass = (day + ' ' + month + ' ' + year);
+
+    console.log(day, month, year);
+    return(day, year, month);
+}  
+
+// Sun Jan 01 2023
 
 // countdownd
-function countdown() {
+function countdown(day, year, month) {
 
     const selectedDate = new Date(defaultDate);
+    console.log(selectedDate)
     const currentDate = new Date();
+    console.log(currentDate)
 
     const totalSeconds = (selectedDate - currentDate) / 1000;
 
@@ -35,7 +48,6 @@ function formatTime(time) {
 }
 
 // initial call
-countdown();
 
 setInterval(countdown, 1000);
 
