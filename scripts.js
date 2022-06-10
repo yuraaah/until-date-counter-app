@@ -7,11 +7,12 @@ const secondsEl = document.getElementById("seconds");
 function countdown() {
     var customDate = document.getElementById("dateInputFrm").valueAsNumber;
 
+    // ("cs-CZ", {timeZone: "Europe/Prague", hour: 'numeric', hour12: false, minute: 'numeric', timeZoneName: 'short'});   
+
     const selectedDate = customDate; 
-    console.log(selectedDate)
     const currentDate = new Date();
 
-    const totalSeconds = (selectedDate - currentDate) / 1000;
+    const totalSeconds = (selectedDate - currentDate ) / 1000;
 
     const days = Math.floor(totalSeconds / 3600 / 24);
     const hours = Math.floor(totalSeconds / 3600) % 24;

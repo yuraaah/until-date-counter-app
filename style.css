@@ -19,6 +19,13 @@ body {
     color: #ffff;
 }
 
+input{
+    background-color: #bbbbbb;
+    border-radius: 5px;
+    border: 1px solid black;
+    
+}
+
 .header-container{
     margin-top: 15%;
 }
@@ -32,10 +39,11 @@ h6{
     justify-content: left;
     padding: 0;
     margin: 0;
+    margin-left: 1px;
 }
 
 #dateInputFrm{
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .countdown-container {
@@ -46,7 +54,7 @@ h6{
 
 .big-text {
     font-weight: bold;
-    font-size: 6rem;
+    font-size: 10rem;
     line-height: 1;
     margin: 1rem 2rem;
 }
@@ -56,5 +64,5 @@ h6{
 }
 
 .countdown-el span {
-    font-size: 1.3rem;
+    font-size: 2.6rem;
 }
